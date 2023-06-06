@@ -1,21 +1,22 @@
 import { AppBar, Toolbar, CssBaseline, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { content } from "../context";
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <AppBar>
+    <AppBar position="static">
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4">Navbar</Typography>
-        <div>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/faq">FAQ</Link>
+        <div className="flex gap-4">
+          {content.navbar.map((item: any, index: any) => (
+            <Link to="/" key={index} className="">
+              {item.listname}
+            </Link>
+          ))}
         </div>
       </Toolbar>
     </AppBar>
   );
-};
-
+}
 export default Navbar;

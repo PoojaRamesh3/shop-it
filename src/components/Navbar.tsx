@@ -8,9 +8,9 @@ function Navbar() {
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4">Navbar</Typography>
-        <div className="flex gap-4">
+        <div>
           {content.navbar.map((item: any, index: any) => (
-            <Link to="/" key={index} className="">
+            <Link to="/" key={index} className="px-5">
               {item.listname}
             </Link>
           ))}

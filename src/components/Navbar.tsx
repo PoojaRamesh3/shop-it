@@ -7,14 +7,15 @@ function Navbar() {
     <AppBar position="static">
       <CssBaseline />
       <Toolbar>
-        <Typography variant="h4">Navbar</Typography>
-        <div>
+        <Typography variant="h5">Shop-It!</Typography>
+
+        <>
           {content.navbar.map((item: any, index: any) => (
-            <Link to="/" key={index} className="px-5">
+            <Link to="/" key={index} className="px-7 font-semibold">
               {item.listname}
             </Link>
           ))}
-        </div>
+        </>
       </Toolbar>
     </AppBar>
   );

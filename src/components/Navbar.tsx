@@ -8,7 +8,6 @@ function Navbar() {
       <CssBaseline />
       <Toolbar>
         <Typography variant="h5">Shop-It!</Typography>
-
         <>
           {content.navbar.map((item: any, index: any) => (
             <Link to="/" key={index} className="px-7 font-semibold">
